@@ -23,8 +23,9 @@
       order: 1;
 
       img {
-        width: 100%;
-        display: block;
+        object-fit: cover;
+        width: 550px;
+        height: 400px;
       }
 
       &::after {
@@ -40,11 +41,6 @@
           rgba(0, 0, 0, 0)
         );
         pointer-events: none;
-      }
-      .certain {
-        object-fit: cover;
-        width: 550px;
-        height: 400px;
       }
 
       aside {
@@ -109,16 +105,17 @@
   }
   main {
     padding-top: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     order: 3;
-    p {
-      color: #b0852c;
-    }
     div {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      p {
+        color: #b0852c;
+      }
       img {
         width: 100%;
       }
@@ -145,9 +142,9 @@
   }
 }
 
-@media (max-width : 1000px) {
-  .rest{
-    main{
+@media (max-width: 1000px) {
+  .rest {
+    main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
@@ -168,22 +165,25 @@
       .hotel {
         order: 2;
         width: 100%;
-        aside{
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        aside {
           gap: 5px;
-          .resting{
+          .resting {
             font-size: 12px;
-            
           }
-          h1{
-              font-size: 20px;
+          h1 {
+            font-size: 20px;
           }
         }
       }
     }
     main {
       order: 3;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
     }
   }
 }
