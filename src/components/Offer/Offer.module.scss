@@ -1,0 +1,121 @@
+.parent {
+  background: #f0eeee;
+  padding: 30px 0;
+}
+.offer {
+  display: flex;
+  overflow: hidden;
+  gap: 30px;
+  .title {
+    order: 1;
+    color: #131212;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 90%;
+      height: 4px;
+      background: linear-gradient(45deg, #af802a, #dfc464);
+    }
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .bottom {
+      order: 2;
+      display: flex;
+      gap: 15px;
+      .nextArrow {
+        transform: rotate(180deg);
+      }
+      .nextArrow,
+      .prevArrow {
+        padding: 10px;
+        border: 1px solid #979797;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .nextArrow:hover,
+      .prevArrow:hover {
+        border-color: #131212;
+        transition: 0.3s;
+        path:nth-of-type(1) {
+          fill: #131212;
+          transition: fill 0.3s;
+        }
+        path:nth-of-type(2) {
+          stroke: #131212;
+          transition: stroke 0.3s;
+        }
+      }
+    }
+  }
+  .bottom2 {
+    order: 2;
+    display: flex;
+    gap: 15px;
+    .nextArrow {
+      transform: rotate(180deg);
+    }
+    .nextArrow,
+    .prevArrow {
+      padding: 10px;
+      border: 1px solid #979797;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    .nextArrow:hover,
+    .prevArrow:hover {
+      border-color: #131212;
+      transition: 0.3s;
+      path:nth-of-type(1) {
+        fill: #131212;
+        transition: fill 0.3s;
+      }
+      path:nth-of-type(2) {
+        stroke: #131212;
+        transition: stroke 0.3s;
+      }
+    }
+    display: none;
+  }
+  .slider {
+    width: 100%;
+    order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    display: flex;
+    flex-direction: column;
+
+    aside {
+      .title {
+        order: 1;
+      }
+      .bottom {
+        display: none;
+      }
+      
+     
+    }
+    .bottom2 {
+      display: block;
+      order: 3;
+      display: flex;
+      gap: 15px;
+      align-self: flex-end;
+    }
+    .slider {
+      order: 2;
+    }
+  }
+}

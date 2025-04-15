@@ -1,0 +1,64 @@
+.rates {
+  padding: 0px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input {
+      width: 70%;
+      padding: 12px;
+      outline: none;
+    }
+    textarea {
+      width: 71.3%;
+      padding: 12px 0px 30px 12px;
+      outline: none;
+      resize: none;
+    }
+    button {
+      width: 12%;
+      padding: 15px 20px;
+      color: white;
+      background: linear-gradient(to right, #b0852c, #d8c05b);
+      border: none;
+      cursor: pointer;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .comments {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      article,
+      aside {
+        display: flex;
+        flex-direction: column;
+      }
+      article {
+        gap: 10px;
+        p {
+          width: 73%;
+          font-size: 17px;
+        }
+        aside {
+          gap: 2px;
+          span {
+            color: #787878;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 1030px) {
+  .rates{
+    display: none;
+  }
+}

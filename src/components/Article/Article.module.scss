@@ -1,0 +1,233 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 20px;
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    button {
+      width: 17%;
+      padding: 5px 15px;
+      color: white;
+      background: linear-gradient(to right, #b0852c, #d8c05b);
+      border: none;
+      cursor: pointer;
+    }
+    h1 {
+      text-transform: uppercase;
+    }
+    .back {
+      width: 3%;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        font-weight: 600;
+      }
+      span {
+        color: #979797;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .hotel {
+        object-fit: cover;
+      }
+    }
+  }
+}
+main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .mission,
+    .place,
+    .texts {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        text-transform: uppercase;
+      }
+      .imgs {
+        display: flex;
+        gap: 20px;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      gap: 20px;
+    }
+
+    .place {
+      h1 {
+        text-transform: uppercase;
+      }
+      p {
+        white-space: wrap;
+      }
+      .texts2 {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p {
+          white-space: wrap;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .tags {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 100px;
+      .tag {
+        display: flex;
+        gap: 10px;
+        .nonActive {
+          color: #787878;
+          text-transform: uppercase;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: #f5f7fa;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+        .active {
+          color: white;
+          text-transform: uppercase;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: black;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px 20px;
+    h1 {
+      font-size: 20px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .insideCard {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        .aboutCard {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          img {
+            cursor: pointer;
+          }
+          .name {
+            background: linear-gradient(to right, #b0852c, #d8c05b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            font-weight: 550;
+            font-size: 15px;
+          }
+          span {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 15px;
+            color: #979797;
+          }
+        }
+      }
+    }
+  }
+  .dot {
+    background-color: #979797;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+  }
+}
+img {
+  cursor: pointer;
+}
+p {
+  line-height: 1.5;
+  font-size: 20px;
+}
+.dot {
+  background-color: #979797;
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+@media (max-width: 1030px) {
+  .article {
+    main {
+      display: flex;
+      flex-direction: column;
+      article {
+        .imgs {
+          display: flex;
+          flex-direction: column;
+        }
+        .tags {
+          display: none;
+        }
+      }
+      .cards {
+        padding-bottom: 50px;
+      }
+    }
+  }
+}
+.Rates {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .article {
+    header {
+      button {
+        font-size: 11px;
+        width: 35%;
+      }
+    }
+    main {
+      .cards {
+        .card {
+          .insideCard {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            img {
+              width: 30%;
+            }
+            .aboutCard {
+              justify-content: space-between;
+              padding: 10px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
