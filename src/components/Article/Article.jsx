@@ -20,7 +20,7 @@ function Article() {
 
   const cards = cardsArticle.map(({ img, name, title, desc, time }, index) => (
     <div className={scss.insideCard} key={index}>
-      <img src={img} alt="" />
+      <img className={scss.imgscards} src={img} alt="" />
       <div className={scss.aboutCard}>
         <p className={scss.name}>{name}</p>
         <h1>{title}</h1>

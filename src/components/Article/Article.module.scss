@@ -91,7 +91,6 @@ main {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding-top: 100px;
       .tag {
         display: flex;
         gap: 10px;
@@ -124,20 +123,22 @@ main {
       font-size: 20px;
     }
     .card {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 30px;
       .insideCard {
         display: flex;
         flex-direction: column;
         gap: 13px;
+        .imgscards {
+          cursor: pointer;
+          width: 250px;
+        }
         .aboutCard {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          img {
-            cursor: pointer;
-          }
+
           .name {
             background: linear-gradient(to right, #b0852c, #d8c05b);
             background-clip: text;
@@ -218,7 +219,7 @@ p {
             display: flex;
             flex-direction: row;
             gap: 10px;
-            img {
+            .imgscards {
               width: 30%;
             }
             .aboutCard {

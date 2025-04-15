@@ -31,7 +31,7 @@ function Rates() {
 
   const seeComments = comments.map(({ name, comment, time }, index) => (
     <div key={index} className={scss.comments}>
-      <img src={profile} alt="profilePhoto" />
+      <img className={scss.logoPhoto} src={profile} alt="profilePhoto" />
       <article>
         <aside>
           <h3>{name}</h3>
