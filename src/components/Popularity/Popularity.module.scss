@@ -3,12 +3,13 @@
   display: flex;
   flex-direction: column;
   padding: 40px 0px;
+  gap: 10px;
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     img{
-      width: 4%;
+      width: 40px;
     }
   }
   hr {
